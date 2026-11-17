@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Потенциал автоматизации учёта поступления услуг</title>
+<style>
+body{margin:0;padding:0;background:#fff;font-family:Inter,"Helvetica Neue",Arial,sans-serif;color:#16181d;font-size:13px;line-height:18px}
+h1{font-size:26px;line-height:32px;font-weight:600;margin:0 0 18px 0;color:#16181d}
+.page{padding:20px 24px}
+.wrap{background:#f3f5f8;padding:14px;border-radius:16px}
+.row{margin:0 -12px}
+.row+.row,.sec{margin-top:12px}
+table.g{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:12px 0}
+td.card{background:#fff;border:1px solid #ececf0;border-radius:14px;padding:12px 14px;box-shadow:0 1px 2px rgba(0,0,0,.04);vertical-align:top}
+td.mid{vertical-align:middle}
+td.green{background:#e3f5ee;border:1px solid #0f9d76}
+.card2{background:#fff;border:1px solid #ececf0;border-radius:14px;padding:12px 14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+table.in{border-collapse:collapse}
+table.in td{padding:0;vertical-align:middle}
+.faint{color:#80869a;font-size:12px;line-height:16px}
+.sec2{color:#4b5160}
+.h3{font-size:14px;line-height:18px;font-weight:600}
+.big{font-size:24px;line-height:30px;font-weight:600}
+.ok{color:#0b6b52}
+.ib{width:34px;height:34px;border-radius:10px;background:#e3f5ee;text-align:center}
+.ib svg{margin-top:8px}
+.badge{padding:4px 12px;border-radius:99px;background:#e3f5ee;color:#0b6b52;font-size:12px;font-weight:500;white-space:nowrap}
+.tip{position:relative;display:inline-block}
+.q{display:inline-block;width:12px;height:12px;line-height:12px;border-radius:99px;border:1px solid #a6a9b4;color:#80869a;font-size:9px;font-weight:600;text-align:center;cursor:help;margin-left:4px;vertical-align:middle}
+.tt{display:none;position:absolute;z-index:40;top:100%;left:0;margin-top:6px;width:290px;padding:8px 10px;border-radius:8px;background:#fff;border:1px solid #e2e3e8;box-shadow:0 6px 20px rgba(0,0,0,.12);color:#4b5160;font-size:12px;line-height:16px;font-weight:400;white-space:normal;text-align:left}
+.tt.r{left:auto;right:0}
+.tip:hover .tt{display:block}
+.inp{font-size:12px;color:#4b5160}
+.box{font-size:14px;line-height:18px;padding:6px 10px;border:1px solid #d3d5dc;border-radius:8px;background:#fff;color:#16181d;margin-top:4px;overflow:hidden;white-space:nowrap}
+table.f{width:100%;border-collapse:collapse}
+table.f td{border-top:1px solid #ececf0;padding:5px 0;vertical-align:top}
+table.f td.l{width:118px;padding-right:8px;color:#4b5160}
+.rep{font-size:12px;line-height:17px}
+.rep p{margin:5px 0 0 0}
+table.st{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:8px 0}
+td.step{padding:8px 10px;border-radius:10px;border:1px solid #ececf0;background:#f3f5f8;vertical-align:top}
+td.acc{border:1px solid #d48a00;background:#fdf1dc}
+.num{display:inline-block;width:20px;height:20px;line-height:20px;border-radius:99px;background:#0f9d76;color:#fff;font-size:11px;font-weight:600;text-align:center;vertical-align:middle;margin-right:6px}
+.acc .num{background:#d48a00}
+.stt{font-weight:500;font-size:12px;line-height:15px;vertical-align:middle}
+.std{color:#80869a;font-size:11px;line-height:14px;margin-top:4px}
+.lane{height:20px;line-height:20px;border-radius:6px;font-size:12px;font-weight:600;text-align:center}
+.lane1{background:#e3f5ee;border:1px solid #0f9d76;color:#0b6b52}
+.lane2{background:#fdf1dc;border:1px solid #d48a00;color:#8a5a00;white-space:nowrap;overflow:hidden;font-size:11px;letter-spacing:-0.2px}
+.bars{border-top:1px solid #ececf0;padding-top:8px;margin-top:10px}
+table.bar{width:100%;border-collapse:collapse;margin-top:5px}
+table.bar td{padding:0;vertical-align:middle}
+table.bar td.l{width:158px}
+.b{display:inline-block;height:14px;border-radius:4px;vertical-align:middle;overflow:hidden;white-space:nowrap;font-size:0}
+.b span{display:inline-block;height:14px}
+.foot{color:#80869a;font-size:12px;line-height:16px;margin-top:12px}
+</style></head>
+<body><div class="page">
+<h1>Потенциал автоматизации учёта поступления услуг</h1>
+<div class="wrap">
+
+<table class="in" style="width:100%"><tr>
+<td style="color:#4b5160;font-size:14px">Акты и УПД на услуги от поставщиков · журнал операций {{ЗАГОЛОВОК_ПЕРИОДА}} · {{ОРГАНИЗАЦИЯ_ТЕКСТ}}</td>
+<td style="text-align:right;white-space:nowrap"><span class="badge">Дашборд для руководителя</span></td>
+</tr></table>
+
+<div class="row sec"><table class="g"><tr>
+<td class="card mid"><table class="in"><tr><td style="width:46px"><div class="ib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f6fed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></div></td><td>
+<div class="faint"><span class="tip">Всего документов поступления услуг<span class="q" title="{{ПОДСКАЗКА_ВСЕГО}}">?</span><span class="tt">{{ПОДСКАЗКА_ВСЕГО}}</span></span></div>
+<div class="big">{{ВСЕГО}}</div><div class="faint">от {{ПОСТАВЩИКОВ_ТЕКСТ}}</div></td></tr></table></td>
+
+<td class="card mid"><table class="in"><tr><td style="width:46px"><div class="ib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0f9d76" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div></td><td>
+<div class="faint"><span class="tip">Кандидаты на автоматизацию<span class="q" title="{{ПОДСКАЗКА_КАНДИДАТЫ}}">?</span><span class="tt">{{ПОДСКАЗКА_КАНДИДАТЫ}}</span></span></div>
+<div class="big">{{КАНДИДАТЫ}}</div><div class="faint">от {{ПОСТАВЩИКОВ_КАНДИДАТОВ_ТЕКСТ}}</div></td></tr></table></td>
+
+<td class="card mid"><table class="in"><tr><td style="width:68px"><div style="position:relative;width:56px;height:56px"><svg width="56" height="56" viewBox="0 0 56 56"><circle cx="28" cy="28" r="24" fill="none" stroke="#c9ccd4" stroke-width="8"/><circle cx="28" cy="28" r="24" fill="none" stroke="#0f9d76" stroke-width="8" stroke-dasharray="{{КОЛЬЦО_ДЛИНА}} {{КОЛЬЦО_ОСТАТОК}}" transform="rotate(-90 28 28)"/></svg><div style="position:absolute;left:0;top:0;width:56px;height:56px;line-height:56px;text-align:center;font-size:13px;font-weight:600">{{ДОЛЯ}}%</div></div></td><td>
+<div class="faint"><span class="tip">Доля к автоматизации<span class="q" title="{{ПОДСКАЗКА_ДОЛЯ}}">?</span><span class="tt r">{{ПОДСКАЗКА_ДОЛЯ}}</span></span></div>
+<div style="font-size:15px;font-weight:500">{{КАНДИДАТЫ}} из {{ВСЕГО}}</div></td></tr></table></td>
+
+<td class="card mid"><table class="in"><tr><td style="width:46px"><div class="ib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f6fed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></div></td><td>
+<div class="faint"><span class="tip">Период анализа<span class="q" title="{{ПОДСКАЗКА_ПЕРИОД}}">?</span><span class="tt r">{{ПОДСКАЗКА_ПЕРИОД}}</span></span></div>
+<div style="font-size:16px;line-height:22px;font-weight:500">{{ПЕРИОД_КОРОТКО}}</div><div class="faint">{{МЕСЯЦЕВ_ТЕКСТ}}</div></td></tr></table></td>
+</tr></table></div>
+
+<div class="row sec"><table class="g"><colgroup><col style="width:28.8%"><col style="width:40.9%"><col style="width:30.3%"></colgroup><tr>
+<td class="card">
+<div class="h3">Экономия</div>
+<div style="margin-top:8px"><div class="faint"><span class="tip">Часов {{ЕД_ПЕРИОДА}}<span class="q" title="Время без автоматизации минус время с автоматизацией.">?</span><span class="tt">Время без автоматизации минус время с автоматизацией.</span></span></div>
+<div class="big">{{ЧАСОВ}} ч</div>
+<div class="faint">≈ {{ЧАСОВ_В_МЕСЯЦ}} ч в месяц · −{{ПРОЦЕНТ_ВРЕМЕНИ}}% времени на эти документы</div></div>
+<div style="margin-top:8px"><div class="faint"><span class="tip">Рублей {{ЕД_ПЕРИОДА}}<span class="q" title="Сэкономленные часы × ставка бухгалтера с учётом страховых взносов.">?</span><span class="tt">Сэкономленные часы × ставка бухгалтера с учётом страховых взносов.</span></span></div>
+<div class="big ok">{{РУБЛЕЙ}} ₽</div>
+<div class="faint">≈ {{РУБЛЕЙ_В_МЕСЯЦ}} ₽ в месяц</div></div>
+<div class="inp" style="margin-top:8px">Зарплата бухгалтера, ₽/мес<div class="box">{{ОКЛАД_ВВОД}}</div></div>
+<table class="in" style="width:100%;margin-top:8px;table-layout:fixed"><tr>
+<td class="inp" style="padding-right:6px">Вручную*, мин<div class="box">{{МВР}}</div></td>
+<td class="inp" style="padding-right:6px">Сценарий, мин<div class="box">{{МСЦ}}</div></td>
+<td class="inp">Проверка, мин<div class="box">{{МПР}}</div></td></tr></table>
+</td>
+
+<td class="card">
+<div class="h3">Как посчитана экономия</div>
+<div class="faint" style="margin:4px 0 6px 0">Вручную — {{МВР}} мин на документ*. С автоматизацией — {{МСЦ}} мин работает сценарий и {{МПР}} мин бухгалтер проверяет. Неповторяющиеся документы остаются ручными.</div>
+<table class="f">
+<tr><td class="l">Без автоматизации</td><td>{{ВСЕГО}} × {{МВР}} = <b>{{МИН_ВРУЧНУЮ}} мин</b></td></tr>
+<tr><td class="l">С автоматизацией</td><td>{{КАНДИДАТЫ}} × ({{МСЦ}} + {{МПР}}) + {{ОСТАЛЬНЫЕ}} × {{МВР}} = <b>{{МИН_С_АВТО}} мин</b></td></tr>
+<tr><td class="l">Экономия времени</td><td>{{МИН_ВРУЧНУЮ}} − {{МИН_С_АВТО}} = {{МИН_ЭКОНОМИЯ}} мин ÷ 60 = <b>{{ЧАСОВ}} ч</b></td></tr>
+<tr><td class="l"><span class="tip">Ставка в час<span class="q" title="Страховые взносы 30,2% (30% + взнос на травматизм 0,2%). 164,3 ч — средняя норма рабочих часов в месяц по производственному календарю 2026 (1 972 ч в год).">?</span><span class="tt">Страховые взносы 30,2% (30% + взнос на травматизм 0,2%). 164,3 ч — средняя норма рабочих часов в месяц по производственному календарю 2026 (1 972 ч в год).</span></span></td><td>{{ОКЛАД}} × {{КОЭФ_ВЗНОСОВ}} ÷ {{ЧАСОВ_В_МЕСЯЦЕ_НОРМА}} = <b>{{СТАВКА}} ₽</b></td></tr>
+<tr><td class="l">Экономия в рублях</td><td>{{ЧАСОВ_2}} ч × {{СТАВКА_2}} ₽ = <b class="ok">{{РУБЛЕЙ}} ₽ {{ЕД_ПЕРИОДА}}</b></td></tr>
+</table>
+</td>
+
+<td class="card green">
+<table class="in"><tr><td style="width:26px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0b6b52" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9a6 6 0 0110-3l2 2M20 15a6 6 0 01-10 3l-2-2"/><path d="M16 4v4h-4M8 20v-4h4"/></svg></td><td class="h3 ok">Что такое повторяющаяся операция</td></tr></table>
+<div class="rep">
+<p>Регулярные документы от одного поставщика по одному договору с одинаковым содержанием: связь, аренда, сервисы, обслуживание.</p>
+<p><b>Критерий в этом расчёте:</b> {{КРИТЕРИЙ}}</p>
+<p>Такие документы разносятся по известному образцу — тот же контрагент, договор и счёт затрат, что в прошлый раз, — поэтому подлежат автоматизации.</p>
+<p>Разовые документы новых поставщиков остаются за бухгалтером.</p>
+</div>
+</td>
+</tr></table></div>
+
+<div class="card2 sec">
+<table class="in" style="width:100%"><tr><td class="h3">Как работает ИИ-помощник</td><td class="faint" style="text-align:right">Распознавание и чтение реквизитов — на сервере клиента, документы не уходят в облако.</td></tr></table>
+<div style="margin:10px -8px 0 -8px"><table class="st"><tr>
+<td class="step"><span class="num">1</span><span class="stt">Документ в папке</span><div class="std">PDF или скан акта / УПД попадает в папку — сценарий запускается сам</div></td>
+<td class="step"><span class="num">2</span><span class="stt">Задача бухгалтеру</span><div class="std">В 1С создаётся задача со сканом документа</div></td>
+<td class="step"><span class="num">3</span><span class="stt">Распознавание</span><div class="std">Текст из PDF или OCR скана; ИИ читает реквизиты</div></td>
+<td class="step"><span class="num">4</span><span class="stt">Поставщик и договор</span><div class="std">Поиск по ИНН, проверка дубля; договор и счета затрат — по прошлым поступлениям</div></td>
+<td class="step"><span class="num">5</span><span class="stt">Черновик поступления</span><div class="std">Непроведённое «Поступление (акт, УПД)»; итог и что проверить — в задаче</div></td>
+<td class="step acc"><span class="num">6</span><span class="stt">Проверка и проведение</span><div class="std">Бухгалтер сверяет черновик со сканом и проводит</div></td>
+</tr></table>
+<table class="st" style="margin-top:8px"><tr>
+<td colspan="5" style="padding:0"><div class="lane lane1">работает сценарий · ≈ {{МСЦ}} мин</div></td>
+<td style="padding:0"><div class="lane lane2">время бухгалтера · {{МПР}} мин</div></td>
+</tr></table></div>
+<div class="bars">
+<div class="faint"><span class="tip">Время на один документ, в одном масштабе<span class="q" title="Полоски в одном масштабе: длина пропорциональна минутам на один документ.">?</span><span class="tt">Полоски в одном масштабе: длина пропорциональна минутам на один документ.</span></span></div>
+<table class="bar"><tr><td class="l">С ИИ-помощником</td><td><span class="b" style="width:{{ШИРИНА_АВТО}}%"><span style="width:{{ДОЛЯ_СЦЕНАРИЙ}}%;background:#0f9d76"></span><span style="width:{{ДОЛЯ_ПРОВЕРКА}}%;background:#d48a00"></span></span> <span style="white-space:nowrap;vertical-align:middle"><b>{{МИН_АВТО_НА_ДОК}} мин</b> <span class="faint">({{МСЦ}} сценарий + {{МПР}} бухгалтер)</span></span></td></tr></table>
+<table class="bar"><tr><td class="l">Вручную*</td><td><span class="b" style="width:{{ШИРИНА_ВРУЧНУЮ}}%;background:#c9ccd4"></span> <span style="white-space:nowrap;vertical-align:middle"><b>{{МВР}} мин</b></span></td></tr></table>
+</div>
+</div>
+
+<div class="foot">* Норма 5 мин — Типовые нормативы времени на работы по бухгалтерскому учёту и финансовой деятельности в государственных (муниципальных) учреждениях, НИИ ТСС Минтруда России, 07.03.2014 № 003, п. 3.7.1 (учёт расчётов с поставщиками и подрядчиками за выполненные работы и оказанные услуги); носят рекомендательный характер (письмо Минтруда России от 27.08.2021 № 14-3/ООГ-8215). Время сценария и проверки — оценка по практике. Оценка при заданных нормах времени; нормы можно изменить.</div>
+</div>
+</div></body></html>
